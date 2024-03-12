@@ -28,7 +28,7 @@ public class TicTacToe {
             placePieces(gameBoard, playerPos, "player");
 
             String result = checkWinner();
-            if(result.length() > 0) {
+            if(!result.isEmpty()) {
                 System.out.print(result);
                 break;
             }
@@ -42,7 +42,7 @@ public class TicTacToe {
             printGameBoard(gameBoard);
 
             result = checkWinner();
-            if (result.length() > 0) {
+            if (!result.isEmpty()) {
                 System.out.println(result);
                 break;
             }
@@ -136,6 +136,5 @@ public class TicTacToe {
                 return "tie!";
             } return "";
     }
-
 
 }
