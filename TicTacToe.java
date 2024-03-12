@@ -19,6 +19,7 @@ public class TicTacToe {
 
         while (true) {
             Scanner in = new Scanner(System.in);
+            System.out.println();
             System.out.println("Enter your placement (1-9): ");
             int playerPos = in.nextInt();
             while(playerPositions.contains(playerPos) || cpuPositions.contains(playerPos)) {
@@ -30,7 +31,9 @@ public class TicTacToe {
 
             String result = checkWinner();
             if(!result.isEmpty()) {
+                System.out.println("");
                 System.out.print(result);
+                printGameBoard(gameBoard);
                 break;
             }
 
@@ -40,11 +43,14 @@ public class TicTacToe {
                 cpuPos = rand.nextInt(9) + 1;
             }
             placePieces(gameBoard, cpuPos, "cpu");
+            System.out.println("Cpu's turn: " + cpuPos);
             printGameBoard(gameBoard);
 
             result = checkWinner();
             if (!result.isEmpty()) {
+                System.out.println("");
                 System.out.println(result);
+                printGameBoard(gameBoard);
                 break;
             }
         }
