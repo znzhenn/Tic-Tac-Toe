@@ -14,6 +14,7 @@ public class TicTacToe {
                                 {'-', '+', '-','+','-'},
                                 {' ', '|', ' ','|',' '}};
 
+        System.out.println("This is the game board: ");
         printGameBoard(gameBoard);
 
         while (true) {
